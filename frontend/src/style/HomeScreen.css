@@ -1,0 +1,34 @@
+@import './styleSheet.css';
+
+
+.container {
+    background-color: var(--light);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.header{
+    color: var(--darkMedium);
+    padding: 20px;
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.image-NZ {
+    padding: 30px;
+    height: 85vh;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    
+}
+
+.image-Mountain {
+    padding: 30px;
+    height: 5vh;
+    position: absolute;
+    bottom: 110px;
+    right: 450px;
+}
