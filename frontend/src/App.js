@@ -1,29 +1,33 @@
 // import logo from './logo.svg';
 import './App.css';
-import homeScreen from './pages/HomeScreen'
-
-//import Switch from 'react-router-dom'
+import HomeScreen from "./pages/HomeScreen";
+import Mountain from "./pages/Mountain";
 import {
   Switch,
   Route,
   Redirect,
-  MemoryRouter,
+  BrowserRouter
 } from 'react-router-dom';
 
 
 function App() {
   return (
-    <MemoryRouter>
-      <div className='BackGroundImage'>
+    <BrowserRouter>
         <Switch>
-          <Route path='/' exact component={homeScreen} />
-          <Route path='*'>
-            <Redirect to='/' />
-          </Route>
+            <Route exact path="/">
+                <Redirect to="/home" />
+            </Route>
+
+            <Route exact path="/mountain">
+                <Mountain />
+            </Route>
+
+            <Route exact path="/home">
+                <HomeScreen />
+            </Route>
         </Switch>
-      </div>
-    </MemoryRouter>
-  );
+    </BrowserRouter>
+);
 }
 
 export default App;
