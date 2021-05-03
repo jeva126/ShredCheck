@@ -13,9 +13,7 @@ function HomeScreen(){
             <div>
                 <img src = {nz} className = "image-NZ" alt = "nz" />
                 <Link to = "/Mountain" >
-                    <button className = "image-Mountain">
-                        <img src = {mountain} alt = "mountain"/>
-                    </button>
+                        <img src = {mountain} className = "image-Mountain" alt = "mountain"/>
                 </Link>
             </div>
             
