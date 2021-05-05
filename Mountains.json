@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "609103a0be2ccb3e9f0e336b"
+  },
+  "Name": "Turoa",
+  "Description": "Ski slopes for all abilities on the side of Mount Ruapehu, the highest mountain on the North Island.",
+  "location": {
+    "Xcoord": "-39.30426955491677",
+    "Ycoord": "175.52692213348155"
+  }
+},{
+  "_id": {
+    "$oid": "609103b3be2ccb3e9f0e336c"
+  },
+  "Name": "Mt Hutt",
+  "Description": "Snow-capped 7,185-foot peak & top winter sports resort with lifts, jumps & runs for all abilities.",
+  "location": {
+    "Xcoord": "-43.459749115588785",
+    "Ycoord": "171.5233028776184"
+  }
+},{
+  "_id": {
+    "$oid": "609103d6be2ccb3e9f0e336d"
+  },
+  "Name": "The Remarkables",
+  "Description": "Offering hiking & skiing at 7 parks, this snowcapped mountain range runs north to south",
+  "location": {
+    "Xcoord": "-45.05378141037862",
+    "Ycoord": "168.81440463283442"
+  }
+}]
