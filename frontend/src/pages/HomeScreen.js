@@ -8,8 +8,15 @@ import logo from '../images/logo.svg'
 import location from '../images/location.svg'
 import { Link } from 'react-router-dom'
 import Mountain from "../components/HomeScreen/MountainComponent/MountainImage.js"
+import { AppContext } from '../AppContext';
+import { useContext } from 'react';
 
 function HomeScreen(){
+    const { mountains, mountainsLoading } = useContext(AppContext);
+
+    if (mountainsLoading) {
+        return null;
+    }else{
 
     return(
         <div className= "container"> 
@@ -18,10 +25,10 @@ function HomeScreen(){
                 <img src = {nz} className = "image-NZ" alt = "nz" ></img>
                 
                     <div className = "mountain-container">
-                        <Link to = "/Mountain" >
+                        <Link to = '/Mountain' >
                             <Mountain 
                                 mountainImage = {mountainImage2}
-                                mountainName = {"Turoa"}
+                                mountainName = {mountains[0].Name}
                                 locationImage = {location}
                                 xRatio = {75}
                                 yRatio = {30}
@@ -31,7 +38,7 @@ function HomeScreen(){
                         <Link to = "/Mountain" >
                             <Mountain 
                                 mountainImage = {mountainImage1}
-                                mountainName = {"Mt Hut"}
+                                mountainName = {mountains[1].Name}
                                 locationImage = {location}
                                 xRatio = {40}
                                 yRatio = {63}
@@ -42,7 +49,7 @@ function HomeScreen(){
                         <Link to = "/Mountain" >
                             <Mountain 
                                 mountainImage = {mountainImage3}
-                                mountainName = {"The Remarkables"}
+                                mountainName = {mountains[2].Name}
                                 locationImage = {location}
                                 xRatio = {23}
                                 yRatio = {70}
@@ -53,6 +60,7 @@ function HomeScreen(){
             </div>
             
         </div>
-    )
+    );
+    }
 }
 export default HomeScreen;
