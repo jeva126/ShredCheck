@@ -25,7 +25,7 @@ function HomeScreen(){
                 <img src = {nz} className = "image-NZ" alt = "nz" ></img>
                 
                     <div className = "mountain-container">
-                        <Link to = '/Mountain' >
+                        <Link to = {`/mountains/${mountains[0].id}`} >
                             <Mountain 
                                 mountainImage = {mountainImage2}
                                 mountainName = {mountains[0].Name}
@@ -35,7 +35,7 @@ function HomeScreen(){
                             />
                         </Link>
                         
-                        <Link to = "/Mountain" >
+                        <Link to = {`/mountains/${mountains[1].id}`} >
                             <Mountain 
                                 mountainImage = {mountainImage1}
                                 mountainName = {mountains[1].Name}
@@ -44,9 +44,7 @@ function HomeScreen(){
                                 yRatio = {63}
                             />
                         </Link>
-                        
-
-                        <Link to = "/Mountain" >
+                        <Link to = {`/mountains/${mountains[2].id}`} >
                             <Mountain 
                                 mountainImage = {mountainImage3}
                                 mountainName = {mountains[2].Name}
