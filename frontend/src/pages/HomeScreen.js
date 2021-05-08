@@ -19,7 +19,7 @@ function HomeScreen(){
     }else{
 
     return(
-        <div className= "container"> 
+        <div className= "home-container"> 
             <img src = {logo} alt = "logo" className = "logo" ></img>
             <div className = "image-container">
                 <img src = {nz} className = "image-NZ" alt = "nz" ></img>
@@ -31,7 +31,7 @@ function HomeScreen(){
                                 mountainName = {mountains[0].Name}
                                 locationImage = {location}
                                 xRatio = {75}
-                                yRatio = {30}
+                                yRatio = {37}
                             />
                         </Link>
                         
@@ -40,8 +40,8 @@ function HomeScreen(){
                                 mountainImage = {mountainImage1}
                                 mountainName = {mountains[1].Name}
                                 locationImage = {location}
-                                xRatio = {40}
-                                yRatio = {63}
+                                xRatio = {42}
+                                yRatio = {65}
                             />
                         </Link>
                         <Link to = {`/mountains/${mountains[2].id}`} >
@@ -49,8 +49,8 @@ function HomeScreen(){
                                 mountainImage = {mountainImage3}
                                 mountainName = {mountains[2].Name}
                                 locationImage = {location}
-                                xRatio = {23}
-                                yRatio = {70}
+                                xRatio = {25}
+                                yRatio = {74}
                             />
                         </Link>
                         
