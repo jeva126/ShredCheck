@@ -48,12 +48,12 @@ export function getWeatherData(
             
             setTomorrowCondition(response.properties.timeseries[0].data.next_12_hours.summary.symbol_code)
             setNextDayCondition(response.properties.timeseries[25].data.next_12_hours.summary.symbol_code)
-            setNextNextDayCondition(response.properties.timeseries[61].data.next_12_hours.summary.symbol_code)
+            setNextNextDayCondition(response.properties.timeseries[65].data.next_12_hours.summary.symbol_code)
 
 
 
 
-            // setCurrentTemp(Math.floor(response.daily[0].temp.min));
+            
            
         })
         .catch(() => {

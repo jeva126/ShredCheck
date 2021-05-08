@@ -1,10 +1,13 @@
 import {Link, useHistory} from "react-router-dom";
 
-function Mountain(){
+
+function Mountain({selectedMountain}){
 
     return(
         <div> 
             MOUNTAIN
+
+            
             
             <Link to = '/home'>
                 <button> Back  </button>

@@ -29,7 +29,9 @@ export default function WeatherDash({mountain}){
 
     const [peak, setPeak] = useState(mountain);
 
-
+    var d = new Date();
+    const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",
+                      "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]; // two lines to avoid index overflow
 
     useEffect(() => {
 
@@ -109,71 +111,62 @@ export default function WeatherDash({mountain}){
     return(
 
         <div className="weatherdash-container">
-            <div className="weatherdash-header"> {/*header*/}
-                <strong>{mountain}</strong>
-            </div>
+ 
 
             <div className="weatherdash-rightnow"> {/* right now */}
-                <div className="weatherdash-rightnow-header">
-                    <strong>Right Now</strong>  
-                </div>
-                <div className="weatherdash-detailscontainer">
-                    <div className="weatherdash-detail"> {/* icon */}
-                        Current Condition:
-                        <img src={process.env.PUBLIC_URL + 'icons/' + weatherSymbol + '.svg'} alt="sun" height='60px' width='60px'></img>
-
-                    </div>
-                    <div className="weatherdash-detail"> {/* air temp */}
-                       
-                             {`Current Temperature: \n `}
-                             <strong> {currentTemp} {`Cº`} </strong>
-                            
-
-                    </div>
-                    <div className="weatherdash-detail"> {/* precipitation */}
-                    {'Precipitation within hour: \n'}
-                        <div><strong> {currentPrecipitation} {`mm \n`} </strong></div>
-
-                    </div>
-                    <div className="weatherdash-detail"> {/* wind */}
-                        {'Wind speed: \n'}
-                        <div><strong> {windSpeed} {`m/s \n`} </strong></div>
-                       
-                        {'Wind Direction: \n'}
-                        <strong> {windDirection} {`º`} </strong>
-
-                    </div>
+                <div className="weatherdash-rightnow-icon">
+                    <img src={process.env.PUBLIC_URL + 'icons/' + weatherSymbol + '.svg'} alt="sun" height='200px' width='200px'></img>
                     
                 </div>
+                <div className="weatherdash-rightnow-temp">
+                        {currentTemp} {`Cº`}
+                </div>
+
+                <div className="weatherdash-rightnow-header">
+                    <strong>Today</strong>  
+                </div>
+
+                <div className="weatherdash-rightnow-wind"> {/* wind */}
+                    {'Wind speed: '}
+                    <strong> {windSpeed} {`m/s  `} </strong>
+                    {'Wind Direction: \n'}
+                    <strong> {windDirection} {`º`} </strong>
+
+                </div>
+                    
+                
 
 
 
             </div>
 
             <div className="weatherdash-nextfewdays"> {/*next few days */}
-                <div className="weatherdash-nextfewdays-header">
-                    <strong>Next Few Days</strong>  
-                </div>
-                <div className="weatherdash-detailscontainer">
+               
                 
-                    <div className="weatherdash-detail"> {/* tomorrow */}
-                    Tomorrow:
-                    <img src={process.env.PUBLIC_URL + 'icons/' + tomorrowCondition + '.svg'} alt="sun" height='60px' width='60px'></img>
+                
+                    <div className="weatherdash-nextfewdays-detailscontainer"> {/* tomorrow */}
+                        <div className="weatherdash-nextfewdays-text">
+                            {weekDays[d.getDay()]}
+                        </div> 
+                        <img src={process.env.PUBLIC_URL + 'icons/' + tomorrowCondition + '.svg'} alt="sun" height='100px' width='100px'></img>
 
                     </div>
-                    <div className="weatherdash-detail"> {/* next day */}
-                    Next Day:
-                    <img src={process.env.PUBLIC_URL + 'icons/' + nextDayCondition + '.svg'} alt="sun" height='60px' width='60px'></img>
+                    <div className="weatherdash-nextfewdays-detailscontainer"> {/* next day */}
+                        <div className="weatherdash-nextfewdays-text">
+                            {weekDays[d.getDay() + 1]}
+                        </div> 
+                        <img src={process.env.PUBLIC_URL + 'icons/' + nextDayCondition + '.svg'} alt="sun" height='100px' width='100px'></img>
 
                     </div>
-                    <div className="weatherdash-detail"> {/* next next day */}
-                    Next Next Day:
-                    <img src={process.env.PUBLIC_URL + 'icons/' + nextNextDayCondition + '.svg'} alt="sun" height='60px' width='60px'></img>
-
+                    <div className="weatherdash-nextfewdays-detailscontainer"> {/* next next day */}
+                        <div className="weatherdash-nextfewdays-text">
+                            {weekDays[d.getDay() + 2]}
+                        </div> 
+                        <img src={process.env.PUBLIC_URL + 'icons/' + nextNextDayCondition + '.svg'} alt="sun" height='100px' width='100px'></img>
                     </div>
                     
                     
-                </div>
+                
 
 
             </div>
