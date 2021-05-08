@@ -13,5 +13,15 @@ const mountainSchema = new Schema({
     timestamps: {}
 });
 
-// Actually create the Mountain schema
 export const Mountain = mongoose.model('Mountain', mountainSchema);
+
+const reviewSchema = new Schema({
+    Name: {type: String, required: true},
+    Date: Date,
+    Description: String,
+    Rating: Number
+}, { 
+    timestamps: {}
+});
+
+export const Review = mongoose.model('Review', reviewSchema);

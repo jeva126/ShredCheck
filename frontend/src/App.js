@@ -6,19 +6,26 @@ import {
   Switch,
   Route,
   Redirect,
-  BrowserRouter
+  BrowserRouter,
+  useRouteMatch
 } from 'react-router-dom';
+import { AppContext } from './AppContext';
+import { useContext } from 'react';
 
 
 function App() {
+    const { mountainsLoading } = useContext(AppContext);
   return (
     <BrowserRouter>
+    {mountainsLoading ? (
+          <div/>
+        ) : (
         <Switch>
             <Route exact path="/">
                 <Redirect to="/home" />
             </Route>
 
-            <Route exact path="/mountain">
+            <Route path="/mountains/:id">
                 <Mountain />
             </Route>
 
@@ -26,6 +33,7 @@ function App() {
                 <HomeScreen />
             </Route>
         </Switch>
+        )}
     </BrowserRouter>
 );
 }
