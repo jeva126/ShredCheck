@@ -14,8 +14,9 @@ if(mountainsLoading){
         <div> 
             <div>{mountain.Name}</div>
             <div>{mountain.Description}</div>
-            <div> X coord :{mountain.location.Xcoord} </div>
-            <div> Y coord :{mountain.location.Ycoord} </div>
+            <div> Longitde :{mountain.Location.Longitude} </div>
+            <div> Latitde :{mountain.Location.Latitude} </div>
+            <div> Elevation:{mountain.Location.Elevation} </div>
             <Link to = '/home'>
                 <button> Back  </button>
             </Link>

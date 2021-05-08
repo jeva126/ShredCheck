@@ -6,8 +6,9 @@ const mountainSchema = new Schema({
     Name: {type: String, required: true},
     Description: String,
     Location:{
-        Xcoord: String,
-        Ycoord: String,
+        Longitude: 	String,
+	    Latitude: 	String,
+	    Elevation:  String,
     }
 }, { 
     timestamps: {}
