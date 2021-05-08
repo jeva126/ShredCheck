@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import HomeScreen from "./pages/HomeScreen";
-import Mountain from "./pages/Mountain";
+import MountainScreen from "./pages/MountainScreen";
 import {
   Switch,
   Route,
@@ -26,7 +26,7 @@ function App() {
             </Route>
 
             <Route path="/mountains/:id">
-                <Mountain />
+                <MountainScreen />
             </Route>
 
             <Route exact path="/home">
