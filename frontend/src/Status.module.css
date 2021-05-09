@@ -9,10 +9,12 @@
     padding: 10px 25px;
     border-radius: 20px;
     box-shadow: 5px 5px 5px 1px #888888;
+    z-index: 1;
 }
 
 .bold {
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .data {

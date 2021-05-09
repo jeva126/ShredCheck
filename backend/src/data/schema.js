@@ -15,6 +15,11 @@ const mountainSchema = new Schema({
         Elements: [String],
         Conditions:[Number]
       },
+    Price:{
+        Source: [String],
+        Elements: [String],
+        Conditions:[Number]
+      },
 
 }, { 
     timestamps: {}

@@ -8,17 +8,19 @@ import WeatherDash from "../components/WeatherDash/WeatherDash.js";
 import Status from "../Status";
 import WeekWeather from "../components/WeatherDash/WeekWeather";
 import TodayWeather from "../components/WeatherDash/TodayWeather";
+import Pricing from "../Pricing";
 
 function MountainScreen(){
 const { mountains, mountainsLoading } = useContext(AppContext);
 const { id } = useParams();
+
 
 if(mountains == null){
     return null;
 }else{
     const mountain = mountains.find(a => a.id === id);
     return(
-        <div className = "screen-container"> 
+        <div className = "screen-container">
                 <Link to = '/home'>
                     <div className = "logo-container">
                         <img src = {logo} alt = "logo" className = "logo-mountain-page" ></img>
@@ -32,10 +34,14 @@ if(mountains == null){
                     <div className = "data-container">
                         <div className = "flex-col">
                             <div className = "flex-row">
+
                                 <div className = "weather-today-container">
                                 <TodayWeather longProp={mountain.Location.Latitude} latProp={mountain.Location.Longitude}></TodayWeather>
                                 </div>
-                                <div className = "price-container"></div>
+                                <div className="price-container">
+                                    <Pricing src={mountain.Price.Source} elements={mountain.Price.Elements} conditions={mountain.Price.Conditions} />
+                                </div>
+
                             </div>
                             <div className = "weather-week-container">
                                 <WeekWeather longProp={mountain.Location.Latitude} latProp={mountain.Location.Longitude}></WeekWeather>
@@ -43,8 +49,8 @@ if(mountains == null){
                         </div>
                     </div>
                 </div>
-                
-            
+
+
                 <div className = "image-mountain-container">
                     <img src = {mountainImage} className = "image-mountain" alt = "mountain" ></img>
                 </div>
