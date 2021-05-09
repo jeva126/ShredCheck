@@ -9,13 +9,21 @@ Make sure you have [brew](brew.sh) installed.
 
 ### To set up the database: 
 1. download MongoDB Compass desktop app (for easy use)
-2.  connect to local db ```localhost: 27017``` , It should be the default
+2. connect to local db ```localhost: 27017``` , It should be the default
 3. click 'create database' call it 'ShredCheck' and call the collection 'mountains' (case is important)
 4. click 'ADD DATA' and import file ```Mountains.json```
 
-## Frontend
-### Set up frontend:
+### Start up backend:
 1. In a new terminal after setting up the backend.
-2. ```npm install```
-3. ```npm start```
-4. Watch it come alive.
+2. ```cd frontend```
+3. ```npm install```
+4. ```npm start```
+5. Watch it come alive.
+
+## Frontend
+### Start up frontend:
+1. In a new terminal after setting up the backend.
+2. ```cd frontend```
+3. ```npm install```
+4. ```npm start```
+5. Watch it come alive.
