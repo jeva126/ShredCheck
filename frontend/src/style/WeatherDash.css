@@ -2,27 +2,26 @@
 
 .weatherdash-container{
     margin-left: 0px;
-    left: 0;
-    top: 295px;
     position: absolute;
     border-radius: 20px;
-    height: 510px;
-    width:  600px;
+    height: 100%;
+    width:  100%;
 }
 
 .weatherdash-rightnow{
     color: white;
     background-color: var(--highlighter);
     border-radius: 20px;
-    height: 300px;
-    width: 600px;
+    height: 60%;
+    width: 100%;
     box-shadow: 5px 5px 5px 1px #888888;
     position: relative;
 }
 
 .weatherdash-rightnow-header{
     border-radius: 20px;
-    font-size: 50px;
+    font-size: 30px;
+    top: 1%;
     width: fit-content;
     padding-left: 20px;
     color: white;
@@ -30,8 +29,8 @@
 
 .weatherdash-rightnow-icon{
     position: absolute;
-    top: 70px;
-    right: 50px;
+    top: 0px;
+    right: 5px;
 }
 
 .weatherdash-rightnow-icon-mountainpage{
@@ -44,16 +43,16 @@
 }
 
 .weatherdash-rightnow-temp{
-   position: absolute;
-    top: 110px;
-    left: 80px;
-    font-size: 80px;
+    position: absolute;
+    left: 45%;
+    top: 1%;
+    font-size: 35px;
 }
 
 .weatherdash-rightnow-wind{
     text-align: center;
     position: absolute;
-    bottom: 10px;
+    bottom: 1%;
     width: 100%;
     font-size: 25px;
 }
@@ -73,7 +72,7 @@
     margin-right: auto;
     text-align: center;
     bottom: 0px;
-    font-size: 30px;
+    font-size: 20px;
     color: white;
 
 }
@@ -87,10 +86,10 @@
 .weatherdash-nextfewdays{
     color: white;
     background-color: var(--dark);
-    padding: 10px;
     border-radius: 20px;
     margin-top: 20px;
-    height: 180px;
+    height: 40%;
+    width: 100%;
     box-shadow: 5px 5px 5px 1px #888888;
     display: flex;
     justify-content: space-evenly;
@@ -99,7 +98,7 @@
 .weatherdash-nextfewdays-detailscontainer{
     color: white;
     margin-top: 10px;
-    font-size: x-large;
+    font-size: large;
     height: fit-content;
     width: 20%;
     margin-right: auto;
