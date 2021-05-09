@@ -59,9 +59,9 @@
 }
 
 .image-mountain-container {
-    height: 70vh;
+    height: auto;
+    width: 35%;
     background-color: var(--light);
-    width: auto;
     position: absolute;
     bottom: 0px;
     right: 0px;
@@ -69,11 +69,60 @@
 
 .image-mountain {
     background-color: var(--light);
-    height: 100%;
+    width: 100%;
     position: absolute;
     bottom: 0px;
     right: 0px;
     
 }
+
+.data-container{
+    position: absolute;
+    left: 7vw;
+    bottom: 9vh;
+    height: 60vh;
+    width: 57vw;
+}
+
+.flex-col{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.flex-row{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    height: 75%;
+}
+
+.weather-today-container{
+    width: 50%;
+    margin-right: 20px;
+    height: 100%;
+    background-color: var(--highlighter);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 1px #888888;
+}
+
+.weather-week-container{
+    margin-top: 40px;
+    width: 100%;
+    height: 25%;
+    background-color: var(--dark);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 1px #888888;
+}
+
+.price-container{
+    margin-left: 20px;
+    width: 50%;
+    height: 100%;
+    background-color: var(--dark);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 1px #888888;
+}
+
 
 
