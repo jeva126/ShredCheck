@@ -14,6 +14,22 @@
     "Elements": [".status_2inE7y",".heading_131f86"],
     "Conditions":[13,0]
   },
+  "Price":{
+    "Source":[
+      "https://www.mtruapehu.com/Passes",
+      "https://www.mtruapehu.com/season-pass"
+  ],
+    "Elements": [
+      ".card_price_Q4pzz",
+      ".card_subtitle"
+  ],
+    "Conditions":[
+      3,
+      4,
+      2,
+      3
+  ]
+  },
   "id": "0"
 },{
   "_id": {
@@ -33,6 +49,22 @@
     ],
     "Conditions":[0,1]
   },
+  "Price":{
+    "Source":[
+      "https://shop.mthutt.co.nz/lift-pass",
+      "https://shop.mthutt.co.nz/season-passes-mh"
+  ],
+    "Elements": [
+      ".product-price",
+      ".product-price"
+  ],
+    "Conditions":[
+      0,
+      1,
+      0,
+      1
+  ]
+  },
   "id": "1"
 },{
   "_id": {
@@ -51,6 +83,22 @@
                 ".w_weather-status__list--mountain-sm > .w_weather-status > .w_weather-status__info > .w_weather-status__data"
     ],
     "Conditions":[0,1]
+  },
+  "Price":{
+    "Source":[
+    "https://shop.theremarkables.co.nz/lift-pass",
+    "https://shop.theremarkables.co.nz/3-peak-pass"
+],
+    "Elements": [
+      ".product-price",
+      ".product-price"
+  ],
+    "Conditions":[
+      0,
+      1,
+      0,
+      1
+  ]
   },
   "id": "2"
 },{

@@ -23,6 +23,15 @@ export default function DataScraper({src, element, condition}) {
                         } else if (item.includes("closed")) {
                             item = "Closed";
                         }
+
+                        if (item.toLowerCase().includes("adult") || item.toLowerCase().includes("youth")) {
+                            let n = item.search(" ");
+                            item = item.slice(n);
+                        } else if (item.includes(".")) {
+                            let split = item.split(".");
+                            item = split[0];
+                        }
+
                         data.push(item);
                     }
                 });
