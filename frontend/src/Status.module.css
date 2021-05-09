@@ -1,11 +1,11 @@
 .widget {
     color: white;
-
     font-size: 18px;
     background-color: #94c4e8;
-    width: 250px;
+    width: 225px;
     padding: 10px 25px;
-    border-radius: 15px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 1px #888888;
 }
 
 .bold {
@@ -14,5 +14,5 @@
 
 .data {
     display: inline-block;
-    /*background-color: red;*/
+    float: right;
 }

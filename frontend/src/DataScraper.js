@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import rp from "request-promise";
 import cheerio from "cheerio";
-import styles from "./DataScraper.module.css";
 
 export default function DataScraper({src, element, condition}) {
     const cros = "https://thingproxy.freeboard.io/fetch/";
@@ -9,27 +8,29 @@ export default function DataScraper({src, element, condition}) {
     const [state, setState] = useState([]);
 
     useEffect(() => {
-        // // use the request-promise library to fetch the HTML
         rp(cros + src)
             .then(html => {
 
-                let names = [];
+                let data = [];
                 let $ = cheerio.load(html);
 
-                // find what element ids, classes, or tags you want from opening console in the browser
-                // cheerio library lets you select elements similar to querySelector
                 $(element).each(function(i, element) {
-                    let name = $(this)
+                    let item = $(this)
                         .text();
                     if (i === condition) {
-                        names.push(name);
+                        if (item.toLowerCase().includes("open")) {
+                            item = "Open";
+                        } else if (item.includes("closed")) {
+                            item = "Closed";
+                        }
+                        data.push(item);
                     }
                 });
 
-                setState(names);
+                setState(data);
             })
             .catch(function(err) {
-                console.log("Crawl Failed");
+                console.log("Error with Data Scraping");
             });
     });
 
