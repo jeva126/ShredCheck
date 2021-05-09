@@ -53,9 +53,6 @@ export default function WeatherDash({latProp, longProp}){
     };
 
     useEffect(() => {
-        console.log("hey")
-        
-        console.log("hayayaya lat is " + latitude)
 
         getData(latProp, longProp);
     

@@ -6,6 +6,8 @@ import { useContext } from 'react';
 import "../style/MountainScreen.css"
 import WeatherDash from "../components/WeatherDash/WeatherDash.js";
 import Status from "../Status";
+import WeekWeather from "../components/WeatherDash/WeekWeather";
+import TodayWeather from "../components/WeatherDash/TodayWeather";
 
 function MountainScreen(){
 const { mountains, mountainsLoading } = useContext(AppContext);
@@ -23,7 +25,6 @@ if(mountains == null){
                     </div>
                 </Link>
 
-                <WeatherDash latProp={mountain.Location.Latitude} longProp={mountain.Location.Longitude} ></WeatherDash>
 
                 <div className = "mountain-boarder">
                     <div className = "mountain-page-title">{mountain.Name}</div>
@@ -31,10 +32,14 @@ if(mountains == null){
                     <div className = "data-container">
                         <div className = "flex-col">
                             <div className = "flex-row">
-                                <div className = "weather-today-container"></div>
+                                <div className = "weather-today-container">
+                                <TodayWeather longProp={mountain.Location.Latitude} latProp={mountain.Location.Longitude}></TodayWeather>
+                                </div>
                                 <div className = "price-container"></div>
                             </div>
-                            <div className = "weather-week-container"></div>
+                            <div className = "weather-week-container">
+                                <WeekWeather longProp={mountain.Location.Latitude} latProp={mountain.Location.Longitude}></WeekWeather>
+                            </div>
                         </div>
                     </div>
                 </div>
