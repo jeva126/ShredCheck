@@ -79,9 +79,9 @@
 .data-container{
     position: absolute;
     left: 7vw;
-    bottom: 7vh;
+    bottom: 9vh;
     height: 60vh;
-    width: 58vw;
+    width: 57vw;
 }
 
 .flex-col{
@@ -94,31 +94,34 @@
     display:flex;
     flex-direction: row;
     width: 100%;
-    height: 80%;
+    height: 75%;
 }
 
 .weather-today-container{
     width: 50%;
-    margin-right: 10px;
+    margin-right: 20px;
     height: 100%;
     background-color: var(--highlighter);
     border-radius: 20px;
+    box-shadow: 5px 5px 5px 1px #888888;
 }
 
 .weather-week-container{
-    margin-top: 20px;
+    margin-top: 40px;
     width: 100%;
-    height: 20%;
+    height: 25%;
     background-color: var(--dark);
     border-radius: 20px;
+    box-shadow: 5px 5px 5px 1px #888888;
 }
 
 .price-container{
-    margin-left: 10px;
+    margin-left: 20px;
     width: 50%;
     height: 100%;
     background-color: var(--dark);
     border-radius: 20px;
+    box-shadow: 5px 5px 5px 1px #888888;
 }
 
 
