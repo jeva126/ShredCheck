@@ -63,6 +63,20 @@
 
 }
 
+.mountain-weather{
+    position: fixed;
+    top: 14%;
+    left: 10%;
+    transition: .5s ease;
+ 
+    opacity: 0;
+
+}
+
+.component-container-mountain:hover .mountain-weather {
+    opacity: 1;
+}
+
 .component-container-mountain:hover .mountain-description {
     opacity: 1;
 }
