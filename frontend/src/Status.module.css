@@ -1,0 +1,21 @@
+.widget {
+    position:absolute;
+    color: white;
+    font-size: 1vw;
+    background-color: #94c4e8;
+    width: 15vw;
+    top: 11vh;
+    right: 8vw;
+    padding: 10px 25px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 1px #888888;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.data {
+    display: inline-block;
+    float: right;
+}
