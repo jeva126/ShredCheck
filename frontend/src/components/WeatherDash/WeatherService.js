@@ -15,13 +15,17 @@ export function getWeatherData(
     setNextNextDayCondition,
     setIsError
 
-) {
+)
+{
+    console.log("elelele is " + ele)
+    console.log("latlatlat id " + lat)
+    console.log("lolonmlong is " + lon)
     // Get all the weather data (current, hourly for current day, and daily)
     return fetch(
         
         // 'https://api.weatherunlocked.com/api/resortforecast/999001?app_id={9e72a158}&app_key={b6008800518133ac9981f15fb0628877}'
+        // `https://api.met.no/weatherapi/locationforecast/2.0/complete?altitude=${ele}&lat=${lat}&lon=${lon}`
         `https://api.met.no/weatherapi/locationforecast/2.0/complete?altitude=${ele}&lat=${lat}&lon=${lon}`
-
     )
         .then((res) => res.json())
         .then((response) => {
@@ -50,6 +54,7 @@ export function getWeatherData(
             setNextDayCondition(response.properties.timeseries[25].data.next_12_hours.summary.symbol_code)
             setNextNextDayCondition(response.properties.timeseries[65].data.next_12_hours.summary.symbol_code)
 
+            console.log("pic name is : " + response.properties.timeseries[65].data.next_12_hours.summary.symbol_code)
 
 
 

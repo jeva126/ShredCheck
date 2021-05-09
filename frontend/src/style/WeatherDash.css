@@ -2,7 +2,9 @@
 
 .weatherdash-container{
     margin-left: 10%;
-
+    left: 0px;
+    top: 300px;
+    position: absolute;
     /* background-color: var(--lightMedium); */
     border-radius: 20px;
     /* padding: 30px; */
@@ -15,6 +17,7 @@
 
 
 .weatherdash-rightnow{
+    color: white;
     background-color: var(--highlighter);
     /* padding: 10px; */
     border-radius: 20px;
@@ -74,7 +77,7 @@
 }
 
 .weatherdash-nextfewdays{
-
+    color: white;
     background-color: var(--dark);
     padding: 10px;
     border-radius: 20px;

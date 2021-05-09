@@ -7,7 +7,7 @@
 
 
 
-export default function WeatherDash({mountain}){
+export default function WeatherDash({latProp, longProp}){
 
     const [currentTemp, setCurrentTemp] = useState(null);
     const [windSpeed, setWindSpeed] = useState(null);
@@ -20,32 +20,24 @@ export default function WeatherDash({mountain}){
     const [nextNextDayCondition, setNextNextDayCondition] = useState(null);
 
    
-    
+    console.log("lat proproprop is " + latProp)
     const [isError, setIsError] = useState(false);
 
-    const [latitude, setLatitude] = useState(null);
-    const [longitude, setLongitude] = useState(null);
-    const [elevation, setElevation] = useState(null);
+    const [latitude, setLatitude] = useState(latProp);
+    const [longitude, setLongitude] = useState(longProp);
+    const [elevation, setElevation] = useState("1000");
 
-    const [peak, setPeak] = useState(mountain);
+    //const [peak, setPeak] = useState(mountain);
+   
 
     var d = new Date();
     const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",
                       "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]; // two lines to avoid index overflow
 
-    useEffect(() => {
-
-        
-
-
-    }, [peak])
-    
-
-
-
-
+ 
 
     const getData = (lat, lon, ele) => {
+        
         getWeatherData(
             lat,
             lon,
@@ -63,49 +55,18 @@ export default function WeatherDash({mountain}){
     };
 
     useEffect(() => {
+        console.log("hey")
+        console.log(elevation)
+        console.log("hayayaya lat is " + latitude)
 
-        console.log("peak is " + mountain);
-
-        switch(mountain) {
-            case "turoa":
-                setLatitude(39.30456);
-                setLongitude(175.52731);
-                setElevation(1_711);
-
-                // setLatitude(48.8573);
-                // setLongitude(121.6667);
-                // setElevation(3286);
-
-                
-              break;
-            case "whakapapa":
-                setLatitude(39.23736);
-                setLongitude(175.55696);
-                setElevation(2_300);
-              break;
-            case "coronet":
-                setLatitude(44.926898);
-                setLongitude(168.736053);
-                setElevation(1_649);
-                break;
-            case "cardrona":
-                setLatitude(44.8649);
-                setLongitude(169.0175);
-                setElevation(1_894);
-                break;
-            default: // turoa
-                setLatitude(39.30456);
-                setLongitude(175.52731);
-                setElevation(2_322);
-          }
-
-        getData(latitude, longitude, elevation);
-
-    },[latitude, longitude, elevation, peak, mountain]);
+        getData(latProp, longProp, elevation);
+        
 
 
+        
 
-
+        
+    },[latitude, longitude, elevation]);
 
 
     return(
@@ -115,7 +76,7 @@ export default function WeatherDash({mountain}){
 
             <div className="weatherdash-rightnow"> {/* right now */}
                 <div className="weatherdash-rightnow-icon">
-                    <img src={process.env.PUBLIC_URL + 'icons/' + weatherSymbol + '.svg'} alt="sun" height='200px' width='200px'></img>
+                    <img src={process.env.PUBLIC_URL + '/icons/' + weatherSymbol + '.svg'} alt="sun" height='200px' width='200px'></img>
                     
                 </div>
                 <div className="weatherdash-rightnow-temp">
@@ -146,26 +107,26 @@ export default function WeatherDash({mountain}){
                 
                     <div className="weatherdash-nextfewdays-detailscontainer"> {/* tomorrow */}
                         <div className="weatherdash-nextfewdays-text">
-                            {weekDays[d.getDay()]}
+                            {weekDays[d.getDay() + 1]}
                         </div> 
-                        <img src={process.env.PUBLIC_URL + 'icons/' + tomorrowCondition + '.svg'} alt="sun" height='100px' width='100px'></img>
+                        <img src={process.env.PUBLIC_URL + '/icons/' + tomorrowCondition + '.svg'} alt="sun" height='100px' width='100px'></img>
 
                     </div>
                     <div className="weatherdash-nextfewdays-detailscontainer"> {/* next day */}
                         <div className="weatherdash-nextfewdays-text">
-                            {weekDays[d.getDay() + 1]}
+                            {weekDays[d.getDay() + 2]}
                         </div> 
-                        <img src={process.env.PUBLIC_URL + 'icons/' + nextDayCondition + '.svg'} alt="sun" height='100px' width='100px'></img>
+                        <img src={process.env.PUBLIC_URL + '/icons/' + nextDayCondition + '.svg'} alt="sun" height='100px' width='100px'></img>
 
                     </div>
                     <div className="weatherdash-nextfewdays-detailscontainer"> {/* next next day */}
                         <div className="weatherdash-nextfewdays-text">
-                            {weekDays[d.getDay() + 2]}
+                            {weekDays[d.getDay() + 3]}
                         </div> 
-                        <img src={process.env.PUBLIC_URL + 'icons/' + nextNextDayCondition + '.svg'} alt="sun" height='100px' width='100px'></img>
+                        <img src={process.env.PUBLIC_URL + '/icons/' + nextNextDayCondition + '.svg'} alt="sun" height='100px' width='100px'></img>
                     </div>
                     
-                    
+                    {/*  */}
                 
 
 
