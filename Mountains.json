@@ -5,9 +5,14 @@
   "Name": "Turoa",
   "Description": "Ski slopes for all abilities on the side of Mount Ruapehu, the highest mountain on the North Island.",
   "Location": {
-    "Longitude": 	"-39.2817",
-	  "Latitude": 	"175.5685",
+    "Longitude": 	"-39.2833",
+	  "Latitude": 	"175.6667",
 	  "Elevation":	"2797"
+  },
+  "Status":{
+    "Source":"https://www.mtruapehu.com/turoa/report",
+    "Elements": [".status_2inE7y",".heading_131f86"],
+    "Conditions":[13,0]
   },
   "id": "0"
 },{
@@ -17,9 +22,16 @@
   "Name": "Mt Hutt",
   "Description": "Snow-capped 7,185-foot peak & top winter sports resort with lifts, jumps & runs for all abilities.",
   "Location": {
-    "Longitude": 	"-43.4717",
-	  "Latitude": 	"171.5264",
+    "Longitude": 	"-43.466",
+	  "Latitude": 	"171.533",
 	  "Elevation":  "2190"
+  },
+  "Status":{
+    "Source":"https://www.mthutt.co.nz/weather-report/",
+    "Elements": [".w_weather-status__list--mountain-sm > .w_weather-status > .w_weather-status__info > .w_weather-status__data",
+                ".w_weather-status__list--mountain-sm > .w_weather-status > .w_weather-status__info > .w_weather-status__data"
+    ],
+    "Conditions":[0,1]
   },
   "id": "1"
 },{
@@ -29,9 +41,16 @@
   "Name": "The Remarkables",
   "Description": "Offering hiking & skiing at 7 parks, this snowcapped mountain range runs north to south",
   "Location": {
-    "Longitude": 	"-45.1500",
-	  "Latitude": 	"168.8333",
+    "Longitude": 	"-45.04837",
+	  "Latitude": 	"168.81007",
 	  "Elevation":	"2319"
+  },
+  "Status":{
+    "Source":"https://www.theremarkables.co.nz/weather-report/",
+    "Elements": [".w_weather-status__list--mountain-sm > .w_weather-status > .w_weather-status__info > .w_weather-status__data",
+                ".w_weather-status__list--mountain-sm > .w_weather-status > .w_weather-status__info > .w_weather-status__data"
+    ],
+    "Conditions":[0,1]
   },
   "id": "2"
 },{
