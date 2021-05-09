@@ -22,10 +22,14 @@ if(mountainsLoading){
             <div className = "mountain-boarder">
                 <div>{mountain.Name}</div>
                 <div>{mountain.Description}</div>
-                <div> X coord :{mountain.location.Xcoord} </div>
-                <div> Y coord :{mountain.location.Ycoord} </div>
 
-                <WeatherDash latProp={mountain.location.Xcoord} longProp={mountain.location.Ycoord}></WeatherDash>
+
+                <WeatherDash latProp={mountain.location.Latitude} longProp={mountain.location.Longitude} eleProp={mountain.location.Elevation}></WeatherDash>
+
+
+                <div> Longitde :{mountain.Location.Longitude} </div>
+                <div> Latitde :{mountain.Location.Latitude} </div>
+                <div> Elevation:{mountain.Location.Elevation} </div>
 
                 <Link to = '/home'>
                     <button> Back  </button>
