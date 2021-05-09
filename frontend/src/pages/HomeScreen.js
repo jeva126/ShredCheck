@@ -14,7 +14,7 @@ import { useContext } from 'react';
 function HomeScreen(){
     const { mountains, mountainsLoading } = useContext(AppContext);
 
-    if (mountainsLoading) {
+    if(mountains == null) {
         return null;
     }else{
 
