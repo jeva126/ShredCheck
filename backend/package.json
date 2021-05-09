@@ -6,21 +6,30 @@
   "scripts": {
     "start": "node -r esm ./src/server.js",
     "server": "npm run start",
+    "test": "jest",
     "production": "cross-env NODE_ENV=production PORT=3002 node -r esm ./src/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel": "^6.23.0",
     "dayjs": "^1.10.4",
     "dummy-json": "^3.0.1",
     "esm": "^3.2.25",
     "express": "^4.17.1",
+    "jest": "^26.6.3",
     "mongoose": "^5.12.0",
     "multer": "^1.4.2",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@types/jest": "^26.0.20",
+    "babel-jest": "^26.6.3",
+    "cross-env": "^7.0.3",
+    "jest": "^26.6.3",
+    "mongodb-memory-server": "^6.9.6"
   }
 }
