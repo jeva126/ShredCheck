@@ -8,11 +8,11 @@ import "../style/MountainScreen.css"
 function MountainScreen(){
 const { mountains, mountainsLoading } = useContext(AppContext);
 const { id } = useParams();
-const mountain = mountains.find(a => a.id === id);
 
-if(mountainsLoading){
+if(mountains == null){
     return null;
 }else{
+    const mountain = mountains.find(a => a.id === id);
     return(
         <div className = "screen-container"> 
             <div className = "mountain-boarder">
