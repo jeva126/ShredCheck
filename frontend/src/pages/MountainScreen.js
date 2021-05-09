@@ -11,8 +11,7 @@ const { mountains, mountainsLoading } = useContext(AppContext);
 const { id } = useParams();
 const mountain = mountains.find(a => a.id === id);
 
-console.log("og lat is " + mountain.location.Xcoord)
-console.log("og long is " + mountain.location.Ycoord)
+
 
 if(mountainsLoading){
     return null;
@@ -24,7 +23,7 @@ if(mountainsLoading){
                 <div>{mountain.Description}</div>
 
 
-                <WeatherDash latProp={mountain.location.Latitude} longProp={mountain.location.Longitude} eleProp={mountain.location.Elevation}></WeatherDash>
+                <WeatherDash latProp={mountain.Location.Latitude} longProp={mountain.Location.Longitude} ></WeatherDash>
 
 
                 <div> Longitde :{mountain.Location.Longitude} </div>

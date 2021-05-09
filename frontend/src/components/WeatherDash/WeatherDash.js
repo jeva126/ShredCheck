@@ -25,7 +25,7 @@ export default function WeatherDash({latProp, longProp}){
 
     const [latitude, setLatitude] = useState(latProp);
     const [longitude, setLongitude] = useState(longProp);
-    const [elevation, setElevation] = useState("1000");
+   
 
     //const [peak, setPeak] = useState(mountain);
    
@@ -56,10 +56,10 @@ export default function WeatherDash({latProp, longProp}){
 
     useEffect(() => {
         console.log("hey")
-        console.log(elevation)
+        
         console.log("hayayaya lat is " + latitude)
 
-        getData(latProp, longProp, elevation);
+        getData(latProp, longProp);
         
 
 
@@ -68,6 +68,7 @@ export default function WeatherDash({latProp, longProp}){
         
     },[latitude, longitude, elevation]);
 
+    console.log("weather symbol is " + weatherSymbol)
 
     return(
 
@@ -76,7 +77,7 @@ export default function WeatherDash({latProp, longProp}){
 
             <div className="weatherdash-rightnow"> {/* right now */}
                 <div className="weatherdash-rightnow-icon">
-                    <img src={process.env.PUBLIC_URL + '/icons/' + weatherSymbol + '.svg'} alt="sun" height='200px' width='200px'></img>
+                    <img src={"http://openweathermap.org/img/w/" + weatherSymbol + ".png"} alt="sun" height='200px' width='200px'></img>
                     
                 </div>
                 <div className="weatherdash-rightnow-temp">
@@ -109,21 +110,21 @@ export default function WeatherDash({latProp, longProp}){
                         <div className="weatherdash-nextfewdays-text">
                             {weekDays[d.getDay() + 1]}
                         </div> 
-                        <img src={process.env.PUBLIC_URL + '/icons/' + tomorrowCondition + '.svg'} alt="sun" height='100px' width='100px'></img>
+                        <img src={"http://openweathermap.org/img/w/" + tomorrowCondition + ".png"} alt="sun" height='100px' width='100px'></img>
 
                     </div>
                     <div className="weatherdash-nextfewdays-detailscontainer"> {/* next day */}
                         <div className="weatherdash-nextfewdays-text">
                             {weekDays[d.getDay() + 2]}
                         </div> 
-                        <img src={process.env.PUBLIC_URL + '/icons/' + nextDayCondition + '.svg'} alt="sun" height='100px' width='100px'></img>
+                        <img src={"http://openweathermap.org/img/w/" + nextDayCondition + ".png"} alt="sun" height='100px' width='100px'></img>
 
                     </div>
                     <div className="weatherdash-nextfewdays-detailscontainer"> {/* next next day */}
                         <div className="weatherdash-nextfewdays-text">
                             {weekDays[d.getDay() + 3]}
                         </div> 
-                        <img src={process.env.PUBLIC_URL + '/icons/' + nextNextDayCondition + '.svg'} alt="sun" height='100px' width='100px'></img>
+                        <img src={"http://openweathermap.org/img/w/" + nextNextDayCondition + ".png"} alt="sun" height='100px' width='100px'></img>
                     </div>
                     
                     {/*  */}
