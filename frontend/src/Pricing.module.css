@@ -1,4 +1,27 @@
-.ruapehulist {
-    background-color: #4b7ea8;
-    display: block;
+.widget {
+    color: white;
+    font-size: 18px;
+    background-color: #023047;
+    width: 300px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 1px #888888;
+}
+
+.container {
+    float: right;
+    width: 120px;
+}
+
+.data {
+    display: inline-block;
+    float: right;
+}
+
+.padding {
+    padding-bottom: 50px;
+}
+
+.bold {
+    font-weight: bold;
 }
