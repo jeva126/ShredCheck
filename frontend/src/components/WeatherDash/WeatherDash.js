@@ -68,7 +68,7 @@ export default function WeatherDash({latProp, longProp}){
 
             <div className="weatherdash-rightnow"> {/* right now */}
                 <div className="weatherdash-rightnow-icon">
-                    <img src={"http://openweathermap.org/img/w/" + weatherSymbol + ".png"} alt="sun" height='200px' width='200px'></img>
+                    <img src={"http://openweathermap.org/img/w/" + weatherSymbol + ".png"} alt="sun" height='100px' width='100px'></img>
                     
                 </div>
                 <div className="weatherdash-rightnow-temp">
@@ -101,21 +101,21 @@ export default function WeatherDash({latProp, longProp}){
                         <div className="weatherdash-nextfewdays-text">
                             {weekDays[d.getDay() + 1]}
                         </div> 
-                        <img src={"http://openweathermap.org/img/w/" + tomorrowCondition + ".png"} alt="sun" height='100px' width='100px'></img>
+                        <img src={"http://openweathermap.org/img/w/" + tomorrowCondition + ".png"} alt="sun" height='50px' width='50px'></img>
 
                     </div>
                     <div className="weatherdash-nextfewdays-detailscontainer"> {/* next day */}
                         <div className="weatherdash-nextfewdays-text">
                             {weekDays[d.getDay() + 2]}
                         </div> 
-                        <img src={"http://openweathermap.org/img/w/" + nextDayCondition + ".png"} alt="sun" height='100px' width='100px'></img>
+                        <img src={"http://openweathermap.org/img/w/" + nextDayCondition + ".png"} alt="sun" height='50px' width='50px'></img>
 
                     </div>
                     <div className="weatherdash-nextfewdays-detailscontainer"> {/* next next day */}
                         <div className="weatherdash-nextfewdays-text">
                             {weekDays[d.getDay() + 3]}
                         </div> 
-                        <img src={"http://openweathermap.org/img/w/" + nextNextDayCondition + ".png"} alt="sun" height='100px' width='100px'></img>
+                        <img src={"http://openweathermap.org/img/w/" + nextNextDayCondition + ".png"} alt="sun" height='50px' width='50px'></img>
                     </div>
                     
                     {/*  */}

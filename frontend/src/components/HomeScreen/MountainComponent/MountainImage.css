@@ -51,24 +51,13 @@
     margin: 5px;
 }
 
-.mountain-description{
-    position: fixed;
-    transition: .5s ease;
-    left: 7%;
-    bottom: 7%;
-    font-size: 100%;
-    font-weight: bold;
-    color: var(--darkMedium);
-    opacity: 0;
-
-}
-
 .mountain-weather{
     position: fixed;
-    top: 14%;
-    left: 10%;
+    width: 30vw;
+    height: 30vh;
+    left: 11vh;
+    bottom: 11vh;
     transition: .5s ease;
- 
     opacity: 0;
 
 }
