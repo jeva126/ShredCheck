@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "609103a0be2ccb3e9f0e336b"
+  },
+  "Name": "Turoa",
+  "Description": "Ski slopes for all abilities on the side of Mount Ruapehu, the highest mountain on the North Island.",
+  "Location": {
+    "Longitude": 	"-39.2817",
+	  "Latitude": 	"175.5685",
+	  "Elevation":	"2797"
+  },
+  "id": "0"
+},{
+  "_id": {
+    "$oid": "609103b3be2ccb3e9f0e336c"
+  },
+  "Name": "Mt Hutt",
+  "Description": "Snow-capped 7,185-foot peak & top winter sports resort with lifts, jumps & runs for all abilities.",
+  "Location": {
+    "Longitude": 	"-43.4717",
+	  "Latitude": 	"171.5264",
+	  "Elevation":  "2190"
+  },
+  "id": "1"
+},{
+  "_id": {
+    "$oid": "609103d6be2ccb3e9f0e336d"
+  },
+  "Name": "The Remarkables",
+  "Description": "Offering hiking & skiing at 7 parks, this snowcapped mountain range runs north to south",
+  "Location": {
+    "Longitude": 	"-45.1500",
+	  "Latitude": 	"168.8333",
+	  "Elevation":	"2319"
+  },
+  "id": "2"
+},{
+  "Name": "Coronet Peak",
+  "Description": "Spectacular roller coaster terrain makes Coronet Peak ski area one of New Zealand's most exciting ski resort destinations.",
+  "Location": {
+    "Longitude": 	"-44.926898",
+	  "Latitude": 	"168.736053",
+	  "Elevation":	"1649"
+  },
+  "id": "3"
+},{
+  "Name": "Cardrona",
+  "Description": "The ski field of Cardrona Alpine Resort ranges from 1,260m to 1,860m. The distribution of slopes is 25% beginner, 25% intermediate, 30% advanced and 20% expert. ",
+  "Location": {
+    "Longitude": 	"-44.8649",
+	  "Latitude": 	"169.0175",
+	  "Elevation":	"1894"
+  },
+  "id": "4"
+}
+]
