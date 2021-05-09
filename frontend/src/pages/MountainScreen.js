@@ -50,26 +50,23 @@ if(mountains == null){
     const mountain = mountains.find(a => a.id === id);
     return(
         <div className = "screen-container"> 
-            <div className = "mountain-boarder">
-                <div>{mountain.Name}</div>
-                <div>{mountain.Description}</div>
-                <div> Longitde :{mountain.Location.Longitude} </div>
-                <div> Latitde :{mountain.Location.Latitude} </div>
-                <div> Elevation:{mountain.Location.Elevation} </div>
-
-                <Status src={remarkablesStatusSrc} elements={remarkablesStatusElements} conditions={remarkablesStatusConditions}/>
-
                 <Link to = '/home'>
-                    <button> Back  </button>
+                    <div className = "logo-container">
+                        <img src = {logo} alt = "logo" className = "logo-mountain-page" ></img>
+                    </div>
                 </Link>
-            </div>
-            <img src = {logo} alt = "logo" className = "logo-mountain-page" ></img>
-            <div className = "image-mountain-container">
-                <img src = {mountainImage} className = "image-mountain" alt = "mountain" ></img>
-            </div>
+
+                <div className = "mountain-boarder">
+                    <div className = "mountain-page-title">{mountain.Name}</div>
+                    <Status src={remarkablesStatusSrc} elements={remarkablesStatusElements} conditions={remarkablesStatusConditions}/>
+                </div>
+                
             
+                <div className = "image-mountain-container">
+                    <img src = {mountainImage} className = "image-mountain" alt = "mountain" ></img>
+                </div>
         </div>
-    );
-}
+        );
+    }
 }
 export default MountainScreen;
