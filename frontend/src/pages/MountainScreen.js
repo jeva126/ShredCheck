@@ -6,33 +6,32 @@ import { useContext } from 'react';
 import "../style/MountainScreen.css"
 
 function MountainScreen(){
-const { mountains, mountainsLoading } = useContext(AppContext);
-const { id } = useParams();
-const mountain = mountains.find(a => a.id === id);
+    const { mountains, mountainsLoading } = useContext(AppContext);
+    const { id } = useParams();
+    const mountain = mountains.find(a => a.id === id);
 
-if(mountainsLoading){
-    return null;
-}else{
-    return(
-        <div className = "screen-container"> 
-            <Link to = '/home'>
-                <div className = "logo-container">
-                    <img src = {logo} alt = "logo" className = "logo-mountain-page" ></img>
+    if(mountainsLoading){
+        return null;
+    }else{
+        return(
+            <div className = "screen-container"> 
+                <Link to = '/home'>
+                    <div className = "logo-container">
+                        <img src = {logo} alt = "logo" className = "logo-mountain-page" ></img>
+                    </div>
+                </Link>
+
+                <div className = "mountain-boarder">
+                    <div className = "mountain-page-title">{mountain.Name}</div>
                 </div>
-            </Link>
-
-            <div className = "mountain-boarder">
-                <div>{mountain.Name}</div>
-                <div>{mountain.Description}</div>
-            </div>
+                
             
-        
-            <div className = "image-mountain-container">
-                <img src = {mountainImage} className = "image-mountain" alt = "mountain" ></img>
+                <div className = "image-mountain-container">
+                    <img src = {mountainImage} className = "image-mountain" alt = "mountain" ></img>
+                </div>
+                
             </div>
-            
-        </div>
-    );
-}
+        );
+    }
 }
 export default MountainScreen;

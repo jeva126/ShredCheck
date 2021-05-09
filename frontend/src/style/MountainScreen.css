@@ -37,11 +37,20 @@
     align-items: center;
 }
 
+.mountain-page-title{
+    position: absolute;
+    left: 28%;
+    top: 7%;
+    font-size: 500%;
+    font-weight: bold;
+    color: var(--darkMedium);
+}
+
 .logo-mountain-page{
     background-color: var(--light);
     position: absolute;
     padding-left: 50px;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 10px;
     left: 0;
     right: 0;
