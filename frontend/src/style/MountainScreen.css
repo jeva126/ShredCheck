@@ -1,6 +1,5 @@
 @import './styleSheet.css';
 
-
 .screen-container {
     background-color: var(--light);
     height: 100vh;
@@ -10,8 +9,6 @@
     align-items: center;
     color: black;
 }
-
-
 
 .mountain-boarder {
     border: solid var(--darkMedium);
