@@ -6,7 +6,7 @@
     width: 9%;
 }
 
-.component-container-mountain:hover .component-image-mountain-info {
+.component-container-mountain:hover .component-image-mountain-title {
     opacity: 0.6;
 }
 
@@ -33,7 +33,7 @@
     z-index: 1;
 }
 
-.component-image-mountain-info {
+.component-image-mountain-title {
     opacity: 0;
     transition: .5s ease;
     background-color: var(--highlighter);
@@ -50,4 +50,22 @@
     border-radius: 15px;
     margin: 5px;
 }
+
+.mountain-description{
+    position: fixed;
+    transition: .5s ease;
+    left: 7%;
+    bottom: 7%;
+    font-size: 100%;
+    font-weight: bold;
+    color: var(--darkMedium);
+    opacity: 0;
+
+}
+
+.component-container-mountain:hover .mountain-description {
+    opacity: 1;
+}
+
+
 

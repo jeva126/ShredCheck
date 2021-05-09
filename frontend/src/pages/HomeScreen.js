@@ -4,7 +4,8 @@ import nz from '../images/new-zealand.svg'
 import mountainImage1 from '../images/mountain-1.svg'
 import mountainImage2 from '../images/mountain-2.svg'
 import mountainImage3 from '../images/mountain-3.svg'
-import logo from '../images/logo.svg'
+import logoImage from '../images/logo-image.svg'
+import logoText from '../images/logo-text.svg'
 import location from '../images/location.svg'
 import { Link } from 'react-router-dom'
 import Mountain from "../components/HomeScreen/MountainComponent/MountainImage.js"
@@ -22,10 +23,14 @@ function HomeScreen(){
         <div className= "home-container"> 
             <div className = "home-boarder"></div>
             <div className = "logo-container-home">
-                <img src = {logo} alt = "logo" className = "home-logo" ></img>
-                <div className = "home-select-text">
+                <img src = {logoImage} alt = "logo" className = "home-logo-image" ></img>
+                <div className = "buffer">
+                    <img src = {logoText} alt = "logo" className = "home-logo-text" ></img>
+                    <div className = "home-select-text">
                         SELECT A MOUNTAIN
+                    </div>
                 </div>
+                
                 
             </div>
             
@@ -40,6 +45,7 @@ function HomeScreen(){
                                 locationImage = {location}
                                 xRatio = {73}
                                 yRatio = {36}
+                                mountain = {mountains[0]}
                             />
                         </Link>
                         
@@ -50,6 +56,7 @@ function HomeScreen(){
                                 locationImage = {location}
                                 xRatio = {41}
                                 yRatio = {63}
+                                mountain = {mountains[1]}
                             />
                         </Link>
                         <Link to = {`/mountains/${mountains[2].id}`} >
@@ -59,6 +66,7 @@ function HomeScreen(){
                                 locationImage = {location}
                                 xRatio = {24}
                                 yRatio = {73}
+                                mountain = {mountains[2]}
                             />
                         </Link>
                         
