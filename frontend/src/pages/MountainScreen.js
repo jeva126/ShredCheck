@@ -57,6 +57,8 @@ if(mountains == null){
                     </div>
                 </Link>
 
+                <WeatherDash latProp={mountain.Location.Latitude} longProp={mountain.Location.Longitude} ></WeatherDash>
+
                 <div className = "mountain-boarder">
                     <div className = "mountain-page-title">{mountain.Name}</div>
                     <Status src={remarkablesStatusSrc} elements={remarkablesStatusElements} conditions={remarkablesStatusConditions}/>

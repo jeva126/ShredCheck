@@ -13,7 +13,7 @@ export default function WeatherDash({latProp, longProp}){
     const [windSpeed, setWindSpeed] = useState(null);
     const [windDirection, setWindDirection] = useState(null);
     const [weatherSymbol, setWeatherSymbol] = useState(null);
-    const [currentPrecipitation, setCurrentPrecipiation] = useState(null);
+    
 
     const [tomorrowCondition, setTomorrowCondition] = useState(null);
     const [nextDayCondition, setNextDayCondition] = useState(null);
@@ -36,17 +36,15 @@ export default function WeatherDash({latProp, longProp}){
 
  
 
-    const getData = (lat, lon, ele) => {
+    const getData = (lat, lon) => {
         
         getWeatherData(
             lat,
             lon,
-            ele,
             setCurrentTemp,
             setWindSpeed,
             setWeatherSymbol,
             setWindDirection,
-            setCurrentPrecipiation,
             setTomorrowCondition,
             setNextDayCondition,
             setNextNextDayCondition,
@@ -60,13 +58,9 @@ export default function WeatherDash({latProp, longProp}){
         console.log("hayayaya lat is " + latitude)
 
         getData(latProp, longProp);
+    
         
-
-
-        
-
-        
-    },[latitude, longitude, elevation]);
+    },[latProp, longProp]);
 
     console.log("weather symbol is " + weatherSymbol)
 
