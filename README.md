@@ -17,7 +17,7 @@ Make sure you have [brew](brew.sh) installed.
 1. In a new terminal.
 2. ```npm run install-full```
 3. ```npm run start-backend```
-4. Open a new terminal.
+4. Without closing the last, open a new terminal.
 5. ```npn run start-frontend```
 6. Watch it come alive.
 
