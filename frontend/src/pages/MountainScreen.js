@@ -10,40 +10,6 @@ function MountainScreen(){
 const { mountains, mountainsLoading } = useContext(AppContext);
 const { id } = useParams();
 
-    /* database */
-    /* turoa */
-    const turoaStatusSrc = "https://www.mtruapehu.com/turoa/report";
-    const turoaStatusElements = [
-        ".status_2inE7y",
-        ".heading_131f86"
-        ]
-    const turoaStatusConditions = [
-        13,
-        0
-    ];
-
-    /* mt hutt */
-    const mtHuttStatusSrc = "https://www.mthutt.co.nz/weather-report/";
-    const mtHuttStatusElements = [
-        ".w_weather-status__list--mountain-sm > .w_weather-status > .w_weather-status__info > .w_weather-status__data",
-        ".w_weather-status__list--mountain-sm > .w_weather-status > .w_weather-status__info > .w_weather-status__data"
-    ];
-    const mtHuttStatusConditions = [
-        0,
-        1
-    ];
-
-    /* remarkables */
-    const remarkablesStatusSrc = "https://www.theremarkables.co.nz/weather-report/";
-    const remarkablesStatusElements = [
-        ".w_weather-status__list--mountain-sm > .w_weather-status > .w_weather-status__info > .w_weather-status__data",
-        ".w_weather-status__list--mountain-sm > .w_weather-status > .w_weather-status__info > .w_weather-status__data"
-    ];
-    const remarkablesStatusConditions = [
-        0,
-        1
-    ];
-
 if(mountains == null){
     return null;
 }else{
@@ -58,7 +24,7 @@ if(mountains == null){
 
                 <div className = "mountain-boarder">
                     <div className = "mountain-page-title">{mountain.Name}</div>
-                    <Status src={remarkablesStatusSrc} elements={remarkablesStatusElements} conditions={remarkablesStatusConditions}/>
+                    <Status src={mountain.Status.Source} elements={mountain.Status.Elements} conditions={mountain.Status.Conditions}/>
                 </div>
                 
             
