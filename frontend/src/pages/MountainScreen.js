@@ -105,12 +105,13 @@ if(mountains == null){
                 <div className = "mountain-boarder">
                     <div className = "mountain-page-title">{mountain.Name}</div>
                     <Status src={mountain.Status.Source} elements={mountain.Status.Elements} conditions={mountain.Status.Conditions}/>
-                    <Pricing src={remarkablesPriceSrc} elements={remarkablesPriceElements} conditions={remarkablesPriceConditions} />
                     <div className = "data-container">
                         <div className = "flex-col">
                             <div className = "flex-row">
                                 <div className = "weather-today-container"></div>
-                                <div className = "price-container"></div>
+                                <div className = "price-container">
+                                    <Pricing src={remarkablesPriceSrc} elements={remarkablesPriceElements} conditions={remarkablesPriceConditions} />
+                                </div>
                             </div>
                             <div className = "weather-week-container"></div>
                         </div>

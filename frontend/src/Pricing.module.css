@@ -1,16 +1,15 @@
 .widget {
     color: white;
-    font-size: 18px;
-    background-color: #023047;
-    width: 300px;
+    font-size: 1.5vw;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
     padding: 10px 25px;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px 1px #888888;
 }
 
 .container {
     float: right;
-    width: 120px;
+    width: 150px;
 }
 
 .data {
@@ -19,7 +18,7 @@
 }
 
 .padding {
-    padding-bottom: 50px;
+    padding-bottom: 10vh;
 }
 
 .bold {
