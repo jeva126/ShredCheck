@@ -15,7 +15,7 @@ Make sure you have [brew](brew.sh) installed.
 
 ### Start up backend:
 1. In a new terminal after setting up the backend.
-2. ```cd frontend```
+2. ```cd backend```
 3. ```npm install```
 4. ```npm start```
 5. Watch it come alive.
