@@ -21,18 +21,19 @@ function HomeScreen(){
 
     return(
         <div className= "home-container"> 
-            <img src = {logo} alt = "logo" className = "logo" ></img>
-            <div className = "image-container">
-                <img src = {nz} className = "image-NZ" alt = "nz" ></img>
+            <div className = "home-boarder"></div>
+            <img src = {logo} alt = "logo" className = "home-logo" ></img>
+            <div className = "home-image-container">
+                <img src = {nz} className = "home-image-NZ" alt = "nz" ></img>
                 
-                    <div className = "mountain-container">
+                    <div className = "home-mountain-container">
                         <Link to = {`/mountains/${mountains[0].id}`} >
                             <Mountain 
                                 mountainImage = {mountainImage2}
                                 mountainName = {mountains[0].Name}
                                 locationImage = {location}
-                                xRatio = {75}
-                                yRatio = {37}
+                                xRatio = {73}
+                                yRatio = {36}
                             />
                         </Link>
                         
@@ -41,8 +42,8 @@ function HomeScreen(){
                                 mountainImage = {mountainImage1}
                                 mountainName = {mountains[1].Name}
                                 locationImage = {location}
-                                xRatio = {42}
-                                yRatio = {65}
+                                xRatio = {41}
+                                yRatio = {63}
                             />
                         </Link>
                         <Link to = {`/mountains/${mountains[2].id}`} >
@@ -50,8 +51,8 @@ function HomeScreen(){
                                 mountainImage = {mountainImage3}
                                 mountainName = {mountains[2].Name}
                                 locationImage = {location}
-                                xRatio = {25}
-                                yRatio = {74}
+                                xRatio = {24}
+                                yRatio = {73}
                             />
                         </Link>
                         

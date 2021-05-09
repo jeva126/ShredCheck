@@ -10,33 +10,72 @@
     color: white;
 }
 
-.logo{
-    position: absolute;
-    width: 30%;
+.home-boarder {
+    border: solid var(--darkMedium);
+    align-self: center;
+    margin: auto;
+    border-radius: 50px;
+    border-width: 10px;
+    height: 90vh;
+    width: 90vw;
 }
 
-.image-container {
-    height: 85vh;
-    width: auto;
+.home-logo{
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    position: absolute;
+    background-color: var(--light);
+    width: 35%;
+}
+
+.home-image-container {
+    height: 40vw;
+    width: 40vw;
+    background-color: var(--light);
     position: absolute;
     bottom: 0px;
     right: 0px;
 }
 
-.image-NZ {
+@media screen and (min-width: 2000px) {
+    .home-image-container{
+        height: 85vh;
+        width: 85vh;
+    }
+}
+
+.home-image-NZ {
     padding: 30px;
-    height: 100%;
+    width: 100%;
+    height: auto;
+    background-color: var(--light);
     position: absolute;
     bottom: 0px;
     right: 0px;
     
 }
 
-.mountain-container {
+@media screen and (min-width: 2000px) {
+    .home-image-NZ{
+        height: 100%;
+        width: auto;
+    }
+}
+
+.home-mountain-container {
     position: absolute;
     padding: 30px;
-    height: 85vh;
-    width: 85vh;
+    height: 40vw;
+    width: 40vw;
     bottom: 0px;
     right: 0px;
 }
+
+@media screen and (min-width: 2000px) {
+    .home-mountain-container{
+        height: 85vh;
+        width: 85vh;
+    }
+}
+
