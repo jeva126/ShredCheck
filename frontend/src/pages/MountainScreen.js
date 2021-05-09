@@ -4,7 +4,10 @@ import mountainImage from '../images/mountain.svg'
 import logo from '../images/logo.svg'
 import { useContext } from 'react';
 import "../style/MountainScreen.css"
+import WeatherDash from "../components/WeatherDash/WeatherDash.js";
 import Status from "../Status";
+import WeekWeather from "../components/WeatherDash/WeekWeather";
+import TodayWeather from "../components/WeatherDash/TodayWeather";
 import Pricing from "../Pricing";
 
 function MountainScreen(){
@@ -24,18 +27,25 @@ if(mountains == null){
                     </div>
                 </Link>
 
+
                 <div className = "mountain-boarder">
                     <div className = "mountain-page-title">{mountain.Name}</div>
                     <Status src={mountain.Status.Source} elements={mountain.Status.Elements} conditions={mountain.Status.Conditions}/>
                     <div className = "data-container">
                         <div className = "flex-col">
                             <div className = "flex-row">
-                                <div className = "weather-today-container"></div>
-                                <div className = "price-container">
+
+                                <div className = "weather-today-container">
+                                <TodayWeather longProp={mountain.Location.Latitude} latProp={mountain.Location.Longitude}></TodayWeather>
+                                </div>
+                                <div className="price-container">
                                     <Pricing src={mountain.Price.Source} elements={mountain.Price.Elements} conditions={mountain.Price.Conditions} />
                                 </div>
+
                             </div>
-                            <div className = "weather-week-container"></div>
+                            <div className = "weather-week-container">
+                                <WeekWeather longProp={mountain.Location.Latitude} latProp={mountain.Location.Longitude}></WeekWeather>
+                            </div>
                         </div>
                     </div>
                 </div>

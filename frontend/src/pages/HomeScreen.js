@@ -8,6 +8,7 @@ import logoImage from '../images/logo-image.svg'
 import logoText from '../images/logo-text.svg'
 import location from '../images/location.svg'
 import { Link } from 'react-router-dom'
+
 import Mountain from "../components/HomeScreen/MountainComponent/MountainImage.js"
 import { AppContext } from '../AppContext';
 import { useContext } from 'react';
@@ -71,6 +72,7 @@ function HomeScreen(){
                         </Link>
                         
                     </div>
+
             </div>
             
         </div>
