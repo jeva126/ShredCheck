@@ -11,6 +11,8 @@
     color: black;
 }
 
+
+
 .mountain-boarder {
     border: solid var(--darkMedium);
     align-self: center;
@@ -24,6 +26,17 @@
     width: 90vw;
 }
 
+.logo-container{
+    top: 0;
+    left: 0;
+    height: 18%;
+    width: 25%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .logo-mountain-page{
     background-color: var(--light);
     position: absolute;
@@ -32,7 +45,7 @@
     padding-bottom: 10px;
     left: 0;
     right: 0;
-    width: 20%;
+    width: 95%;
 }
 
 .image-mountain-container {

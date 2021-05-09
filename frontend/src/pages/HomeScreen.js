@@ -21,7 +21,14 @@ function HomeScreen(){
     return(
         <div className= "home-container"> 
             <div className = "home-boarder"></div>
-            <img src = {logo} alt = "logo" className = "home-logo" ></img>
+            <div className = "logo-container-home">
+                <img src = {logo} alt = "logo" className = "home-logo" ></img>
+                <div className = "home-select-text">
+                        SELECT A MOUNTAIN
+                </div>
+                
+            </div>
+            
             <div className = "home-image-container">
                 <img src = {nz} className = "home-image-NZ" alt = "nz" ></img>
                 

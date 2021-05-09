@@ -15,16 +15,18 @@ if(mountainsLoading){
 }else{
     return(
         <div className = "screen-container"> 
+            <Link to = '/home'>
+                <div className = "logo-container">
+                    <img src = {logo} alt = "logo" className = "logo-mountain-page" ></img>
+                </div>
+            </Link>
+
             <div className = "mountain-boarder">
                 <div>{mountain.Name}</div>
                 <div>{mountain.Description}</div>
-                <div> X coord :{mountain.location.Xcoord} </div>
-                <div> Y coord :{mountain.location.Ycoord} </div>
-                <Link to = '/home'>
-                    <button> Back  </button>
-                </Link>
             </div>
-            <img src = {logo} alt = "logo" className = "logo-mountain-page" ></img>
+            
+        
             <div className = "image-mountain-container">
                 <img src = {mountainImage} className = "image-mountain" alt = "mountain" ></img>
             </div>
