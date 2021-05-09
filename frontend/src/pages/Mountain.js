@@ -1,12 +1,12 @@
 import {Link, useHistory} from "react-router-dom";
-import DataScraper from "../DataScraper";
+import Pricing from "../Pricing";
+import Status from "../Status";
 
 function Mountain(){
 
     return(
         <div>
-            <DataScraper/>
-
+            <Status />
             <Link to = '/home'>
                 <button> Back  </button>
             </Link>
