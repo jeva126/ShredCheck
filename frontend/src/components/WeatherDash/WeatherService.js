@@ -14,11 +14,10 @@ export function getWeatherData(
     setIsError
 
 )
-{
-    
+{  
     return fetch(
         
-        `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=minutely,hourly&appid=${API_KEY}`
+        `https://api.openweathermap.org/data/2.5/onecall?lat=${lon}&lon=${lat}&units=metric&exclude=minutely,hourly&appid=${API_KEY}`
 
         ) 
         .then((res) => res.json())
