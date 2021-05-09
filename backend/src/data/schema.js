@@ -9,7 +9,13 @@ const mountainSchema = new Schema({
         Longitude: 	String,
 	    Latitude: 	String,
 	    Elevation:  String,
-    }
+    },
+    Status:{
+        Source: String,
+        Elements: [String],
+        Conditions:[Number]
+      },
+
 }, { 
     timestamps: {}
 });
