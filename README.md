@@ -1,7 +1,9 @@
 # ShredCheck
 
-The onestop shop for your ski holiday insites
+Shred check is your all in one location for planning a ski holiday.   
+Here you will be able to check, prices, field status, weather and more.
 
+## Backend
 Follow [this doc](https://docs.mongodb.com/manual/administration/install-community/) to install MongoDB community and get your local server running.   
 Make sure you have [brew](brew.sh) installed.
 
