@@ -15,15 +15,17 @@ export default function DataScraper({src, element, condition}) {
                 let $ = cheerio.load(html);
 
                 $(element).each(function(i, element) {
-                    let item = $(this)
-                        .text();
+                    let item = $(this).text();
+
                     if (i === condition) {
+                        // manipulate status text for consistency
                         if (item.toLowerCase().includes("open")) {
                             item = "Open";
                         } else if (item.includes("closed")) {
                             item = "Closed";
                         }
 
+                        // manipulate pricing data for consistency
                         if (item.toLowerCase().includes("adult") || item.toLowerCase().includes("youth")) {
                             let n = item.search(" ");
                             item = item.slice(n);

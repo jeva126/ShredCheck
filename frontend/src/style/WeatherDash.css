@@ -8,8 +8,6 @@
     width:  100%;
 }
 
-
-
 .weatherdash-rightnow{
     color: white;
     background-color: var(--highlighter);
@@ -18,8 +16,6 @@
     width: 100%;
     box-shadow: 5px 5px 5px 1px #888888;
     position: relative;
-
-
 }
 
 .weatherdash-rightnow-header{
@@ -29,7 +25,6 @@
     width: fit-content;
     padding-left: 20px;
     color: white;
-
 }
 
 .weatherdash-rightnow-icon{
@@ -117,8 +112,3 @@
     margin-bottom: 10px;
     top: 0px;
 }
-
-
-
-
-
