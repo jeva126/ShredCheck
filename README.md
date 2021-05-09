@@ -13,17 +13,10 @@ Make sure you have [brew](brew.sh) installed.
 3. click 'create database' call it 'ShredCheck' and call the collection 'mountains' (case is important)
 4. click 'ADD DATA' and import file ```Mountains.json```
 
-### Start up backend:
-1. In a new terminal after setting up the backend.
-2. ```cd backend```
-3. ```npm install```
-4. ```npm start```
-5. Watch it come alive.
-
-## Frontend
-### Start up frontend:
-1. In a new terminal after setting up the backend.
-2. ```cd frontend```
-3. ```npm install```
-4. ```npm start```
-5. Watch it come alive.
+### Start up Program:
+1. In a new terminal.
+2. ```npm run install-full```
+3. ```npm run start-backend```
+4. Open a new terminal.
+5. ```npn run start-frontend```
+6. Watch it come alive.
