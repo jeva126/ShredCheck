@@ -6,15 +6,15 @@ import { useContext } from 'react';
 import "../style/MountainScreen.css"
 
 function MountainScreen(){
-    const { mountains, mountainsLoading } = useContext(AppContext);
-    const { id } = useParams();
-    const mountain = mountains.find(a => a.id === id);
+const { mountains, mountainsLoading } = useContext(AppContext);
+const { id } = useParams();
 
-    if(mountainsLoading){
-        return null;
-    }else{
-        return(
-            <div className = "screen-container"> 
+if(mountains == null){
+    return null;
+}else{
+    const mountain = mountains.find(a => a.id === id);
+    return(
+        <div className = "screen-container"> 
                 <Link to = '/home'>
                     <div className = "logo-container">
                         <img src = {logo} alt = "logo" className = "logo-mountain-page" ></img>
