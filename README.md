@@ -20,3 +20,7 @@ Make sure you have [brew](brew.sh) installed.
 4. Open a new terminal.
 5. ```npn run start-frontend```
 6. Watch it come alive.
+
+## Conceptual Designs 
+![image](https://user-images.githubusercontent.com/63177740/117566020-69ee1f00-b108-11eb-93c0-1ec15ddf298a.png)
+![image](https://user-images.githubusercontent.com/63177740/117566078-9dc94480-b108-11eb-8752-669c709b907c.png)
