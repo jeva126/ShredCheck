@@ -48,7 +48,7 @@ export default function TodayWeather({latProp, longProp}){
        <div>
 
                <div className="weatherdash-rightnow-icon-mountainpage">
-                   <img src={"http://openweathermap.org/img/w/" + weatherSymbol + ".png"} alt="sun" height='150px' width='150px'></img>
+                   <img src={"http://openweathermap.org/img/wn/" + weatherSymbol + "@4x.png"} alt="sun" height='150px' width='150px'></img>
                    
                </div>
                <div className="weatherdash-rightnow-header">

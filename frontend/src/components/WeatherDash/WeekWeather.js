@@ -66,33 +66,33 @@ export default function WeekWeather({latProp, longProp}){
                        <div className="weatherdash-nextfewdays-text">
                            {weekDays[d.getDay() + 1]}
                        </div> 
-                       <img src={"http://openweathermap.org/img/w/" + tomorrowCondition + ".png"} alt="sun" height='100px' width='100px'></img>
+                       <img src={"http://openweathermap.org/img/wn/" + tomorrowCondition + "@4x.png"} alt="sun" height='100px' width='100px'></img>
 
                    </div>
                    <div className="weatherdash-nextfewdays-detailscontainer"> {/* next day */}
                        <div className="weatherdash-nextfewdays-text">
                            {weekDays[d.getDay() + 2]}
                        </div> 
-                       <img src={"http://openweathermap.org/img/w/" + nextDayCondition + ".png"} alt="sun" height='100px' width='100px'></img>
+                       <img src={"http://openweathermap.org/img/wn/" + nextDayCondition + "@4x.png"} alt="sun" height='100px' width='100px'></img>
 
                    </div>
                    <div className="weatherdash-nextfewdays-detailscontainer"> {/* next next day */}
                        <div className="weatherdash-nextfewdays-text">
                            {weekDays[d.getDay() + 3]}
                        </div> 
-                       <img src={"http://openweathermap.org/img/w/" + nextNextDayCondition + ".png"} alt="sun" height='100px' width='100px'></img>
+                       <img src={"http://openweathermap.org/img/wn/" + nextNextDayCondition + "@4x.png"} alt="sun" height='100px' width='100px'></img>
                    </div>
                    <div className="weatherdash-nextfewdays-detailscontainer"> {/* next next day */}
                        <div className="weatherdash-nextfewdays-text">
                            {weekDays[d.getDay() + 4]}
                        </div> 
-                       <img src={"http://openweathermap.org/img/w/" + nextNextNextDayCondition + ".png"} alt="sun" height='100px' width='100px'></img>
+                       <img src={"http://openweathermap.org/img/wn/" + nextNextNextDayCondition + "@4x.png"} alt="sun" height='100px' width='100px'></img>
                    </div>
                    <div className="weatherdash-nextfewdays-detailscontainer"> {/* next next day */}
                        <div className="weatherdash-nextfewdays-text">
                            {weekDays[d.getDay() + 5]}
                        </div> 
-                       <img src={"http://openweathermap.org/img/w/" + nextNextNextNextDayCondition + ".png"} alt="sun" height='100px' width='100px'></img>
+                       <img src={"http://openweathermap.org/img/wn/" + nextNextNextNextDayCondition + "@4x.png"} alt="sun" height='100px' width='100px'></img>
                    </div>
                    
                   
